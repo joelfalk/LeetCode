@@ -1,8 +1,7 @@
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Vector;
 
-class sum {
+
+class FindTwoIndexToSum {
     public int[] twoSum(int[] nums, int target) {
         int x = 0;
         int y = 0;
@@ -27,12 +26,12 @@ class sum {
         for (int i = 0; i < nums.length; i++) {
             int num2 = target - nums[i];
             if (hashMap.containsKey(num2)) {
-                return new int [] {hashMap.get(num2), i};
+                return new int[]{hashMap.get(num2), i};
             } else {
                 hashMap.put(nums[i], i);
             }
         }
-        return new int[] {};
+        return new int[]{};
 
     }
 
