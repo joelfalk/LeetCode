@@ -5,22 +5,14 @@ import java.util.HashMap;
 import java.util.List;
 
 public class SumOfNonRepeatingLetters {
-    public int lengthOfLongestSubstring(String s) {
 
-        int lengthSum = 0;
+    public int lengthOfLongestSubstring(String s) {
         int max = 0;
-        List<Character> characterList = new ArrayList<>();
+        String str = "";
+
         for (Character c : s.toCharArray()) {
-            if (!characterList.contains(c)) {
-                characterList.add(c);
-                lengthSum++;
-            } else {
-                if (max < lengthSum) {
-                    max = lengthSum;
-                }
-                lengthSum = 0;
-                characterList.clear();
-            }
+            str = str.contains(String.valueOf(c)) ? str.substring(str.indexOf(c) + 1) + c : str + c;
+            max = Math.max(max, str.length());
         }
         return max;
     }
