@@ -7,7 +7,7 @@ class SumOfNonRepeatingLettersTest extends Specification {
         SumOfNonRepeatingLetters sum = new SumOfNonRepeatingLetters();
 
         when:
-        int length = sum.lengthOfLongestSubstring("abcabcbb")
+        int length = sum.lengthOfLongestSubstring("dvdf")
 
         then:
         length == 3
